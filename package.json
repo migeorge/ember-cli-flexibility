@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-flexibility",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Automatically support flexbox in older versions of IE in your Ember app",
   "directories": {
     "doc": "doc",
