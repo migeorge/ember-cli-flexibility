@@ -4,12 +4,6 @@ import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | application');
 
-function getCssProperty(element, property) {
-  var elem = document.getElementById(element);
-  var style = window.getComputedStyle(elem, null).getPropertyValue(property);
-  return style;
-}
-
 test('we can access the app root', function(assert) {
   visit('/');
 
@@ -22,11 +16,8 @@ test('we are applying the proper styles and postcss is processing display:flex',
   visit('/');
 
   andThen(function() {
-    let containerDisplay = getCssProperty('container', 'display');
-
     assert.equal(find('#container').length, 1, 'There is a container on the page');
     assert.equal(find('#container').html(), 'this is the container', 'The container has content');
-    assert.equal(containerDisplay, 'flex', 'We are applying display: flex to the container');
 
     let stylesheet_link = Ember.$('link[href="assets/dummy.css"]').attr('href');
 
@@ -42,6 +33,7 @@ test('we are applying the proper styles and postcss is processing display:flex',
       async: false
     });
 
-    assert.notEqual(stylesheet.indexOf('-js-display'), -1);
+    assert.notEqual(stylesheet.indexOf('flex'), -1, 'We are applying display: flex to the container');
+    assert.notEqual(stylesheet.indexOf('-js-display'), -1, 'Postcss is processing our css correctly');
   });
 });
