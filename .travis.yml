@@ -1,35 +1,35 @@
----
 language: node_js
 node_js:
-  - "0.12"
-
+- '0.12'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 env:
-  - EMBER_TRY_SCENARIO=default
-  - EMBER_TRY_SCENARIO=ember-1.13
-  - EMBER_TRY_SCENARIO=ember-release
-  - EMBER_TRY_SCENARIO=ember-beta
-  - EMBER_TRY_SCENARIO=ember-canary
-
+- EMBER_TRY_SCENARIO=default
+- EMBER_TRY_SCENARIO=ember-1.13
+- EMBER_TRY_SCENARIO=ember-release
+- EMBER_TRY_SCENARIO=ember-beta
+- EMBER_TRY_SCENARIO=ember-canary
 matrix:
   fast_finish: true
   allow_failures:
-    - env: EMBER_TRY_SCENARIO=ember-canary
-
+  - env: EMBER_TRY_SCENARIO=ember-canary
 before_install:
-  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
-
+- export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
+- npm config set spin false
+- npm install -g npm@^2
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
-
+- npm install -g bower
+- npm install
+- bower install
 script:
-  - ember try $EMBER_TRY_SCENARIO test
+- ember try:one $EMBER_TRY_SCENARIO test
+deploy:
+  provider: npm
+  email: mike@tallduck.com
+  api_key:
+    secure: Aj/pw0+u854rH9LFiTVo9Cu1nfGYjBiNAfxMLzMOltMox0KaRnVpSud10vYBxs6/pTmCOM5PMk0VY9cfCIVXcaWpzkIAJ7k8DtKwlDKC0cvXXfxiUiTVtR9Z24JIaTgWsiwUrJ9bPhWUvHlBYC+etiqfWpCpReV1sd7oR3FILFR6WPyGirB3AFujbUpkiCc8uvzZTDg59d11YLELel36PcxPyZlSiglP0ENqVfW/LjoyHUzLO7Wk2F8q0qikn7PB5FS9V5s955O7cepTlq4H8wj98qfnz5EvjwDP2xMUUHujI+5OG2JSme9qXzzxVARBcOxsE1RHvTgiMsV7CBN7Qjozh7FatdjVvv6XmLUUnpUPVTjfuKp7hDswOqviPLhboMcaBdahptdKO/9hEYJ+2Kk281bvlJfxsWn0eqTrOIEPiGRTX9YLQ3Ps0wAEHuR7YSWsyF0WrD/vKoKPW7ILJ5WKctrh3J+CqdvqmY3a5zv03pTzSTWokWv1sXhK39RuVqJVTsgMBBMsqzj5gwN1pbpwGtmPN5wXTePx9Jd6nagUz8z9r6fe66IolFx5yhOVBBEjhwkzcFEm9bG1Da/+MnuMIZKdiyf2dDcSovo/eFMZSn4XatNGHNpajHXHXioGf3992hDq5K5Yt28Km+psyjnUHqOusgthpOMewJ3oCvc=
+  on:
+    tags: true
+    repo: migeorge/ember-cli-flexibility
