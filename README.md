@@ -1,5 +1,8 @@
 # ember-cli-flexibility
 
+[![Build Status](https://travis-ci.org/migeorge/ember-cli-flexibility.svg?branch=master)](https://travis-ci.org/migeorge/ember-cli-flexibility)
+[![Dependency Status](https://david-dm.org/migeorge/ember-cli-flexibility.svg)](https://david-dm.org/migeorge/ember-cli-flexibility)
+
 The Ember addon was inspired by [ember-cli-autoprefixer](https://github.com/kimroen/ember-cli-autoprefixer "ember-cli-autoprefixer").
 
 Drop this plugin into your app to automatically enable and process the [Flexibility](https://github.com/10up/flexibility "Flexibility")
