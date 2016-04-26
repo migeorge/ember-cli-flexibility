@@ -13,7 +13,7 @@ polyfill to bring flexbox layouts to older versions of IE.
 ## What does it do?
 
 The addon will postprocess your styles to add `-js-display: flex;` anywhere you are
-using `display: flex`.
+using `display: flex;`.
 
 It is also compatible with preprocessors like [ember-cli-sass](https://github.com/aexmachina/ember-cli-sass)
 since it runs on the output css afterwards.
