@@ -25,6 +25,10 @@ module.exports = {
 
     this.enabled = this.options.enabled;
     delete this.options.enabled;
+
+    if (this.enabled) {
+      app.import(app.bowerDirectory + '/flexibility/dist/flexibility.js');
+    }
   },
 
   postprocessTree: function(type, tree) {
