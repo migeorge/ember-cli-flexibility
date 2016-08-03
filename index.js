@@ -27,7 +27,7 @@ module.exports = {
     delete this.options.enabled;
 
     if (this.enabled) {
-      app.import(app.bowerDirectory + '/flexibility/dist/flexibility.js');
+      app.import(app.bowerDirectory + '/flexibility/flexibility.js');
     }
   },
 
