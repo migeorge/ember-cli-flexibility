@@ -6,6 +6,6 @@ module.exports = {
   },
 
   afterInstall: function() {
-    return this.addBowerPackageToProject('flexibility');
+    return this.addBowerPackageToProject('flexibility', '~2.0.1');
   }
 };
