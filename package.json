@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/migeorge/ember-cli-flexibility.git"
+    "url": "https://github.com/migeorge/ember-cli-flexibility"
   },
   "bugs": {
     "url": "https://github.com/migeorge/ember-cli-flexibility/issues"
