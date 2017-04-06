@@ -26,7 +26,7 @@ module.exports = {
     this.enabled = this.options.enabled;
     delete this.options.enabled;
 
-    if (this.enabled) {
+    if (this.enabled && !process.env.EMBER_CLI_FASTBOOT) {
       app.import(app.bowerDirectory + '/flexibility/flexibility.js');
     }
   },
@@ -37,5 +37,9 @@ module.exports = {
     }
 
     return tree;
+  },
+
+  isDevelopingAddon: function() {
+    return true;
   }
 };
