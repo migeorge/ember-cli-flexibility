@@ -1,10 +1,9 @@
 # ember-cli-flexibility
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/migeorge/ember-cli-flexibility.svg)](https://greenkeeper.io/)
-
 [![npm version](https://badge.fury.io/js/ember-cli-flexibility.svg)](https://badge.fury.io/js/ember-cli-flexibility)
 [![Build Status](https://travis-ci.org/migeorge/ember-cli-flexibility.svg?branch=master)](https://travis-ci.org/migeorge/ember-cli-flexibility)
 [![Dependency Status](https://david-dm.org/migeorge/ember-cli-flexibility.svg)](https://david-dm.org/migeorge/ember-cli-flexibility)
+[![Greenkeeper badge](https://badges.greenkeeper.io/migeorge/ember-cli-flexibility.svg)](https://greenkeeper.io/)
 [![Ember Observer Score](https://emberobserver.com/badges/ember-cli-flexibility.svg)](https://emberobserver.com/addons/ember-cli-flexibility)
 
 This Ember addon was inspired by [ember-cli-autoprefixer](https://github.com/kimroen/ember-cli-autoprefixer "ember-cli-autoprefixer").
