@@ -60,7 +60,7 @@
     "broccoli-postcss": "^3.0.0",
     "ember-cli-babel": "^5.1.6",
     "lodash": "^4.11.1",
-    "postcss-flexibility": "^1.0.3"
+    "postcss-flexibility": "^2.0.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
