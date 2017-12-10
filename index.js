@@ -4,9 +4,21 @@
 var defaults    = require('lodash/defaults');
 var postcss     = require('broccoli-postcss');
 var flexibility = require('postcss-flexibility');
+var Funnel      = require('broccoli-funnel');
+var map         = require('broccoli-stew').map;
 
 module.exports = {
   name: 'ember-cli-flexibility',
+
+  treeForVendor: function() {
+    var flexibilityLib = new Funnel('bower_components', {
+      files: ['flexibility/flexibility.js'],
+      getDestinationPath: function(relativePath) {
+        return 'fastboot-flexibility.js';
+      }
+    });
+    return map(flexibilityLib, (content) => 'if (typeof FastBoot === \'undefined\') { ' + content + ' }');
+  },
 
   included: function(app) {
     this.app = app;
@@ -26,8 +38,8 @@ module.exports = {
     this.enabled = this.options.enabled;
     delete this.options.enabled;
 
-    if (this.enabled && !process.env.EMBER_CLI_FASTBOOT) {
-      app.import(app.bowerDirectory + '/flexibility/flexibility.js');
+    if (this.enabled) {
+      app.import('vendor/fastboot-flexibility.js');
     }
   },
 
