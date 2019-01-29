@@ -58,7 +58,7 @@
   ],
   "dependencies": {
     "broccoli-postcss": "^3.0.0",
-    "ember-cli-babel": "^5.1.6",
+    "ember-cli-babel": "^7.4.1",
     "lodash": "^4.11.1",
     "postcss-flexibility": "^2.0.0"
   },
