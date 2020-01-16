@@ -1,5 +1,7 @@
 # ember-cli-flexibility
 
+⚠️ This addon is deprecated and unmaintained. Flexbox is supported in all major browsers without polyfills ⚠️
+
 [![npm version](https://badge.fury.io/js/ember-cli-flexibility.svg)](https://badge.fury.io/js/ember-cli-flexibility)
 [![Build Status](https://travis-ci.org/migeorge/ember-cli-flexibility.svg?branch=master)](https://travis-ci.org/migeorge/ember-cli-flexibility)
 [![Dependency Status](https://david-dm.org/migeorge/ember-cli-flexibility.svg)](https://david-dm.org/migeorge/ember-cli-flexibility)
